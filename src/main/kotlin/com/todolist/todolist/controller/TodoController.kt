@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.*
 class TodoController(
         private val todoService: TodoService
 ) {
-//    @GetMapping
+    @GetMapping
+    fun getTodos() = todoService.getTodos()
 
-//    @PostMapping
+    @PostMapping
+    fun insertTodo(@RequestBody todoRequest: TodoRequest) = todoService.insertTodo(todoRequest.todoName)
 
-//    @PutMapping
+    @PutMapping(path = ["/{todoId}"])
+    fun updateTodo(@PathVariable("todoId") todoId: Long) = todoService.updateTodo(todoId)
 
-//    @DeleteMapping
+    @DeleteMapping(path = ["/{todoId}"])
+    fun deleteTodo(@PathVariable("todoId") todoId: Long) = todoService.deleteTodo(todoId)
 }
