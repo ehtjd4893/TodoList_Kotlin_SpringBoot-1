@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*
 class TodoController(
         private val todoService: TodoService
 ) {
-    @GetMapping
+//    @GetMapping
 
-    @PostMapping
+//    @PostMapping
 
-    @PutMapping
+//    @PutMapping
 
-    @DeleteMapping
+//    @DeleteMapping
 }
